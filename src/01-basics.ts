@@ -44,7 +44,7 @@ const friend1 : Friend =  {
     },
   };
 
-export const colleagues : ColleagueHistory = {
+export const colleagues = {
   current: [colleague1, colleague2, colleague3],
   former: [],
 };
