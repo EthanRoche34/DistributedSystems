@@ -70,6 +70,7 @@ function sortColleagues(
   ): Friend[] {
     const filter = friends.filter(callback);
     const found = new Array();
+
     filter.forEach(f => {
         found.push( `${f.name}`)
     });
