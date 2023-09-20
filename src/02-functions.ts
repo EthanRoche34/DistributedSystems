@@ -9,8 +9,8 @@ function older(f: Friend) {
 console.log(older(friends[0])) //If this is run before allOlder, the older age from this will still be here
 
 function allOlder(fs: Friend[]) {
-    const ages = fs.map((friends) => ({
-        ...friends,
+    const ages = fs.map((friends) => ({ //Creating new array from friends array
+        ...friends, //Taking in everything from friends
         age : friends.age += 1 }))
     //return `${fs.name} is now ${f.age}`
     return ages.map((friend) => `${friend.name} is now ${friend.age}`)
@@ -89,9 +89,9 @@ console.log(findFriends(friends, (friend) => friend.age < 35));
 console.log("==================\n")
 
 function addInterest(fs : Friend, interest : string) {
-  const updated = {...fs}
+  const updated = {...fs}   //Cloning inputted friend
 
-  if (!updated.interests) {
+  if (!updated.interests) {   //Checks it see if 
     updated.interests = [];
   }
 
